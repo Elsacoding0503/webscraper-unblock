@@ -47,17 +47,17 @@ headers = {
     'User-Agent': ua.random
 }
 
-url_tsmc = 'https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20230301&stockNo=2330&response=json&_=1681287102939'
-response_twse = requests.get(url=url_tsmc, headers=headers, proxies=proxies)
-data_twse = response_twse.json()
+url_semicon = 'https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date=20230331&selectType=24&response=json&_=1681351633418'
+response_semicon = requests.get(url=url_semicon, headers=headers, proxies=proxies)
+data_semicon = response_semicon.json()
 
-code = [content_twse[0] for content_twse in data_twse['data']]
-titles = [content_twse[1] for content_twse in data_twse['data']]
-yield_ = [content_twse[2] for content_twse in data_twse['data']]
-dividend_year = [content_twse[3] for content_twse in data_twse['data']]
-pe_ratio = [content_twse[4] for content_twse in data_twse['data']]
-prb = [content_twse[5] for content_twse in data_twse['data']]
-financial_statement_yq = [content_twse[6] for content_twse in data_twse['data']]
+code = [content_twse[0] for content_twse in data_semicon['data']]
+titles = [content_twse[1] for content_twse in data_semicon['data']]
+yield_ = [content_twse[2] for content_twse in data_semicon['data']]
+dividend_year = [content_twse[3] for content_twse in data_semicon['data']]
+pe_ratio = [content_twse[4] for content_twse in data_semicon['data']]
+prb = [content_twse[5] for content_twse in data_semicon['data']]
+financial_statement_yq = [content_twse[6] for content_twse in data_semicon['data']]
 
 semi_con = {}
 semi_con["證券代號"]=code
