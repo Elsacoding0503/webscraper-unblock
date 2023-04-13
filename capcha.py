@@ -2,15 +2,12 @@
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
-import time,random
+import time
 from fake_useragent import UserAgent 
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-import requests, os
-from bs4 import BeautifulSoup as bs
-from selenium.webdriver.common.action_chains import ActionChains
+import requests
 import base64
-from selenium.webdriver.common.keys import Keys
 import api
 
 ua = UserAgent()
